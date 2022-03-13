@@ -1,0 +1,25 @@
+{
+  "name": "cs180-kernel-panic",
+  "version": "1.0.0",
+  "description": "cs180project-022-kernel-panic created by GitHub Classroom",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node --max-old-space-size=8192 ./src/server/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://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@github.com/ucr-cs180-fall21/cs180project-022-kernel-panic.git"
+  },
+  "author": "kernel-panic",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ucr-cs180-fall21/cs180project-022-kernel-panic/issues"
+  },
+  "homepage": "https://github.com/ucr-cs180-fall21/cs180project-022-kernel-panic#readme",
+  "dependencies": {
+    "chart.js": "^3.6.0",
+    "ejs": "3.1.6",
+    "express": "4.17.1"
+  }
+}

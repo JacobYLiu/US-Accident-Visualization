@@ -1,0 +1,58 @@
+<%- include ("./header.ejs") %>
+<link rel="stylesheet" href="../public/css/db.css"/>
+<script src="../public/js/db.js"></script>
+<script
+    src="https://code.jquery.com/ui/1.13.0/jquery-ui.min.js"
+    integrity="sha256-hlKLmzaRlE8SCJC1Kw8zoUbU8BxA+8kR3gseuKfMjxA="
+    crossorigin="anonymous">
+</script>
+
+<div class="section-wrapper">
+    <div class="section-title">Manage Database</div>
+    <div id="db-search-wrapper">
+        <form id="searchForm" onsubmit="searchByID(event)">
+            <input type="text"
+                   id="db-search-input"
+                   class="form-control db-search-form-control"
+                   placeholder="Search by ID"
+            >
+            <button class="search-btn" type="submit">Search</button>
+            <button class="search-btn" onclick="resetSearch(event)">Reset</button>
+        </form>
+        <button class="search-btn" id="add-btn" onclick="addAccident(event)">insert</button>
+    </div>
+
+    <div id="db-table">
+        <table class="styled-table">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>City</th>
+                    <th>County</th>
+                    <th>State</th>
+                    <th>Zip Code</th>
+                    <th>Start Time</th>
+                    <th>End Time</th>
+                    <th>Start Latitude</th>
+                    <th>Start Longitude</th>
+                    <th>End Latitude</th>
+                    <th>End Longitude</th>
+                    <th>Severity</th> 
+                    <th>Weather Condition</th>
+                    <th>Visibility(mi)</th>
+                    <th>Wind_Speed(mph)</th>
+                    <th>Temperature(F)</th>
+                    <th id="db-action-header">Actions</th>
+                </tr>
+            </thead>
+            <tbody id="db-table-body">
+            </tbody>
+        </table>
+    </div>
+    <div id="export-wrapper">
+        <button class="export-btn" onclick="exportCSV(event)">Export To CSV</button>
+        <p id="export-text" >This may take a while, please don't refresh page.</p>
+    </div>
+</div>
+
+<%- include ("./footer.ejs") %>

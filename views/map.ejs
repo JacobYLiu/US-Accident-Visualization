@@ -1,0 +1,15 @@
+<%- include ("./header.ejs") %>
+<link rel="stylesheet" type="text/css" href="../public/css/map.css"/>
+<script src="../public/js/map.js"></script>
+<h3>My Google Maps Demo</h3>
+<div id="map"></div>
+
+<script
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCLLUo32ZpB9jmLB7cblFzRKv73xF2XjDE&callback=initMap&libraries=visualization&v=weekly"
+    async>
+    $(document).ready(mapInit());
+</script>
+
+<script src="../public/js/map.js"></script>
+
+<%- include ("./footer.ejs") %>

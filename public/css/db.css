@@ -1,0 +1,146 @@
+* {
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+}
+
+.section-wrapper {
+    font-family: "Open Sans";
+}
+
+.db-search-form-control {
+    padding: 5px 8px;
+    color: black;
+    background-color: white;
+    border: 0px solid rgb(145, 154, 172);
+    font-size: 14px;
+}
+
+.db-search-form-control:focus {
+    color: black;
+    background-color: white;
+    box-shadow: none;
+    border: 0px solid rgb(145, 154, 172);
+}
+
+.db-search-form-control::placeholder{
+    color: rgb(145, 154, 172);
+}
+
+#add-btn {
+}
+
+.search-btn {
+    width: 60px;
+}
+
+.export-btn {
+    width: 100px;
+    height: 40px;
+}
+
+#db-search-wrapper {
+    margin-top: 20px;
+    padding-left: 20px;
+    margin-right: 100px;
+    display: flex;
+    justify-content: space-between;
+}
+
+#db-table {
+    margin-top: 5px;
+    margin-right: 42px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+    overflow-x: auto;
+    scrollbar-color: #6969dd rgba(0,0,0,0);
+}
+
+.styled-table {
+    border-collapse: separate;
+    border-spacing: 0px;
+    font-size: 0.9em;
+    font-family: sans-serif;
+    min-width: 400px;
+}
+
+.db-action-col {
+    position: sticky;
+    right: 0px;
+    background-color: #E4E9F7;
+}
+
+#db-action-header {
+    position: sticky;
+    right: 0px;
+    background-color: #009879;
+}
+
+.styled-table thead tr {
+    background-color: #009879;
+    color: #ffffff;
+    text-align: left;
+}
+
+.styled-table th,
+.styled-table td {
+    padding: 12px 15px;
+    border-bottom: 1px solid #dddddd;
+}
+
+.styled-table tbody tr {
+    border-bottom: 1px solid #dddddd;
+}
+
+.styled-table tbody tr:last-of-type {
+    border-bottom: 2px solid #009879;
+}
+th, td { min-width: 200px; }
+
+td input {
+    background-color: #E4E9F7;
+    box-shadow: none;
+    border: none;
+    font-size: 1em;
+    font-family: sans-serif;
+    max-width: 150px;
+}
+
+td input[disabled] {
+    color: black;
+}
+
+.db-action-img {
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+}
+
+.lds-spinner {
+    color: official;
+    display: inline-block;
+    position: relative;
+    width: 80px;
+    height: 80px;
+}
+.lds-spinner div {
+    transform-origin: 40px 40px;
+    animation: lds-spinner 1.2s linear infinite;
+}
+.lds-spinner div:after {
+    content: " ";
+    display: block;
+    position: absolute;
+    top: 3px;
+}
+
+#export-wrapper {
+    margin-top: 15px;
+    margin-left: 10px;
+    width: 500px;
+}
+
+#export-text {
+    display: none;
+    float: right;
+    margin-top: 10px;
+}

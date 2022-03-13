@@ -1,0 +1,90 @@
+#upload-area {
+    width: 480px;
+    margin-top: 20px;
+    margin-left: 20px;
+}
+
+#drop-area {
+    border: 2px dashed #ccc;
+    border-radius: 10px;
+    width: 480px;
+    font-family: sans-serif;
+    padding: 20px;
+}
+
+#drop-area.highlight {
+    border-color: purple;
+}
+
+p {
+    margin-top: 0;
+}
+
+.upload-form {
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+#upload-result {
+    padding-top: 30px;
+    padding-left: 30px;
+    display: flex;
+    gap: 10px;
+}
+
+#csv-img {
+    width: 50px;
+    height: 50px;
+}
+
+#file-size {
+    margin-top: 8px;
+}
+
+.progress-bar {
+    position: absolute;
+    height: 5px;
+    width: 350px;
+    border: none;
+    background-color: #bfc5d1;
+    margin-top: 3px;
+}
+
+progress[value]::-webkit-progress-bar {
+    background-color: #bfc5d1;
+}
+
+progress[value]::-webkit-progress-value {
+    background-color: #3fa0e2
+}
+
+progress[value]::-moz-progress-bar {
+    background-color: #3fa0e2;
+}
+
+#upload-img {
+    width: 300px;
+    height: 300px;
+    margin-left: auto;
+}
+
+#gallery {
+    margin-top: 10px;
+}
+
+#gallery img {
+    width: 150px;
+    margin-bottom: 10px;
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
+.button {
+    display: inline-block;
+    color: blue;
+    cursor: pointer;
+}
+
+#fileElem {
+    display: none;
+}

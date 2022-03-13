@@ -1,0 +1,80 @@
+<%- include ("./header.ejs") %>
+<link rel="stylesheet" type="text/css" href="../public/css/analysis.css"/>
+<script src="../public/js/analysis.js"></script>
+<script
+    src="https://code.jquery.com/ui/1.13.0/jquery-ui.min.js"
+    integrity="sha256-hlKLmzaRlE8SCJC1Kw8zoUbU8BxA+8kR3gseuKfMjxA="
+    crossorigin="anonymous">
+</script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script> $(document).ready(initialize());</script>
+<script src="../public/js/analysis.js"></script>
+
+<div class="section-wrapper">
+    <p>
+        <div class="section-title">Analysis of Data</div>
+    </p>
+    <form id="dataForm">
+        <fieldset>
+            <div class="top-accidents">
+                <p id="top-accidents-title">Top 10 Days with the most accidents</p>
+                <br>
+                <p id="top-accidents-display"></p>
+            </div>
+        </fieldset>
+        <div>
+            <canvas id="top10_accidents" width="800" height="450"></canvas>
+        </div>
+        <br>
+        <fieldset>
+            <div class="fewest-accidents">
+                <p id="fewest-accidents-title">Top 10 Days with the least accidents</p>
+                <br>
+                <p id="fewest-accidents-display"></p>
+            </div>
+        </fieldset>
+        <div>
+            <canvas id="bottom10_accidents" width="800" height="450"></canvas>
+        </div>
+        <br>
+        <fieldset>
+            <div class="state-severity">
+                <p id="each-state-severity">Severity Score for each State</p>
+                <br>
+                <p id="each-state-severity-display"></p>
+            </div>
+        </fieldset>
+        <br>
+        <div>
+            <canvas id="severity_accidents" width="800" height="450"></canvas>
+        </div>
+        <br>
+        <fieldset>
+            <div class="country-severity">
+                <p id="country-severity-title">Severity Score for the Country</p>
+                <br>
+                <p id="country-severity-display"></p>
+            </div>
+        </fieldset>
+        <br>
+        <fieldset>
+            <div class="yearly-change">
+                <p id="yearly-change-title">Accident percent change per year</p>
+                <br>
+                <p id="yearly-change-display"></p>
+            </div>
+        </fieldset>
+        <br>
+        <div>
+            <canvas id="percentage-change-chart" width="800" height="450"></canvas>
+        </div>
+    </form>
+</div>
+<br>
+<div>
+    <h1>Total Accidents per day</h1>
+    <canvas id="all_chart" width="800" height="450"></canvas>
+</div>
+
+
+<%- include ("./footer.ejs") %>

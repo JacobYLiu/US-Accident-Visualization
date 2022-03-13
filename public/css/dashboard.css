@@ -1,0 +1,91 @@
+.section-title {
+    margin-bottom: 20px;
+}
+
+.selectbox-title {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+#checkboxForm fieldset {
+    display: flex;
+    justify-content: space-between;
+    margin-right: 20px;
+    border: none;
+    background-color: #e8eefb;
+    border-radius: 10px;
+    box-shadow: 1px 1px 10px 8px #d7dde9;
+}
+
+.selectbox-title {
+    font-weight: 600;
+}
+
+.weather label {
+    margin-right: 15px;
+}
+
+.total-accidents {
+    margin-top: 20px;
+}
+
+.total-accidents-title {
+    font-family: "Poppins", sans-serif;
+    font-size: 25px;
+    font-weight: 600;
+    margin-bottom: -10px;
+}
+
+.total-accidents-display {
+    font-size: 50px;
+}
+
+.accidents-per-100k {
+    margin-top: 20px;
+}
+
+.accidents-per-100k-title {
+    font-family: "Poppins", sans-serif;
+    font-size: 25px;
+    font-weight: 600;
+    margin-bottom: -10px;
+}
+
+.accidents-weather {
+    margin-top: 20px;
+}
+
+.accidents-weather-title {
+    font-family: "Poppins", sans-serif;
+    font-size: 25px;
+    font-weight: 600;
+    margin-bottom: -10px;
+}
+
+.accidents-weather-display {
+    font-size: 50px;
+}
+
+#checkboxForm fieldset {
+    display: inline-block;
+    justify-content: space-between;
+    margin-right: 20px;
+    height: 100%;
+    border: none;
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: #e8eefb;
+    border-radius: 10px;
+    box-shadow: 1px 1px 10px 8px #d7dde9;
+}
+
+#searchButton {
+    width: 30%;
+    margin-top: 8px;
+}
+
+#regions_div {
+    width: 900px; 
+    height: 500px;
+}
+

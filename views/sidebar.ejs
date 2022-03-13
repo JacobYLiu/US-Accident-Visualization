@@ -1,0 +1,74 @@
+<link rel="stylesheet" href="../public/css/sidebar.css">
+<div class="sidebar">
+    <div class="logo-details">
+        <div class="logo_name">US Accidents</div>
+        <i class='menu-toggle' id="btn" src="" >
+            <img class="menu-image" src="../public/assets/ucr.png">
+        </i>
+    </div>
+    <ul class="nav-list">
+        <li>
+            <a href="/">
+                <i>
+                    <img class="menu-icon" src="../public/assets/dashboard.png">
+                </i>
+                <span class="links_name">Dashboard</span>
+            </a>
+            <span class="tooltip">Dashboard</span>
+        </li>
+        <li>
+            <a href="/map">
+                <i>
+                    <img class="menu-icon" src="../public/assets/globe.png">
+                </i>
+                <span class="links_name">Map View</span>
+            </a>
+            <span class="tooltip">Map View</span>
+        </li>
+        <li>
+            <a href="/analysis">
+                <i>
+                    <img src="../public/assets/chart.png">
+                </i>
+                <span class="links_name">Analysis</span>
+            </a>
+            <span class="tooltip">Analysis</span>
+        </li>
+        <li>
+            <a href="/search">
+                <i>
+                    <img src="../public/assets/search.png">
+                </i>
+                <span class="links_name">Search</span>
+            </a>
+            <span class="tooltip">Search</span>
+        </li>
+        <li>
+            <a href="/db">
+                <i>
+                    <img src="../public/assets/db.png">
+                </i>
+                <span class="links_name">Database</span>
+            </a>
+            <span class="tooltip">Database</span>
+        </li>
+        <li class="profile">
+            <div class="profile-details">
+                <img src="profile.jpg" alt="profileImg">
+                <div class="name_job">
+                    <div class="name">Kernel Panic</div>
+                    <div class="job">UC Riverside</div>
+                </div>
+            </div>
+            <i class='bx bx-log-out' id="log_out" ></i>
+        </li>
+    </ul>
+</div>
+<script>
+    let sidebar = document.querySelector(".sidebar");
+    let ucButton = document.querySelector("#btn");
+
+    ucButton.addEventListener("click", () => {
+        sidebar.classList.toggle("open");
+    });
+</script>

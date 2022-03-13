@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="../public/css/main.css">
+        <link rel="stylesheet" href="../public/css/choose_db.css">
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+            integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+            crossorigin="anonymous">
+        </script>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="../public/js/choose_db.js"></script>
+    </head>
+    <body>
+        <section class="main-section">
+            <div class="section-wrapper">
+                <div class="section-title">Choose Database</div>
+                <div id="upload-area">
+                    <div id="drop-area">
+                        <form class="upload-form">
+                            <img id="upload-img" src="../public/assets/upload.png"/>
+                            <p>Drag and drop your CSV file here or
+                                <label class="button" for="fileElem">
+                                    select file
+                                    <input type="file" id="fileElem" accept=".csv" onchange="handleInput(this.files)">
+                                </label>
+                            </p>
+                        </form>
+                    </div>
+                    <div id="upload-result">
+                        <img id="csv-img" src="../public/assets/csv.png" />
+                        <div id="progress">
+                            <p id="file-name">ss.csv</p>
+                            <progress class="progress-bar" max=100 value=0></progress>
+                            <p id="file-size">dd</p>
+                        </div>
+                    </div>
+                    <button id="upload-btn" onclick="uploadFile(event)">Upload</button>
+                </div>
+            </div>
+        </section>
+    </body>
+</html>

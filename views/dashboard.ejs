@@ -1,0 +1,93 @@
+<%- include ("./header.ejs") %>
+<link rel="stylesheet" href="../public/css/dashboard.css">
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+<script>
+    google.load('visualization', '1', {packages: ['geochart']});
+</script>
+<script src="../public/js/dashboard.js"></script>
+<script
+    src="https://code.jquery.com/ui/1.13.0/jquery-ui.min.js"
+    integrity="sha256-hlKLmzaRlE8SCJC1Kw8zoUbU8BxA+8kR3gseuKfMjxA="
+    crossorigin="anonymous">
+</script>
+<script>
+    $(document).ready(function() { $('.weather').hide(); });
+</script>
+<head>
+    <script type="text/javascript" src="jQuery.js"></script>
+</head>
+<div class="section-wrapper">
+    <p>
+        <div class="section-title">General Statistics</div>
+    </p>
+    
+    <form id="checkboxForm">
+        <fieldset>
+            <div class="selectbox-title">
+                Select a geochart to display:
+            </div>
+            <script type="text/javascript">
+                function showCheckboxes() { $(".weather").show(); }  
+                function hideCheckboxes() { $(".weather").hide(); }   
+            </script>
+            <p>          
+                    <input type="radio" id="total-accidents-chart" name="radioButton" value="totalAcc" onclick="hideCheckboxes()">
+                    <label for="total-accidents-chart"> Total accidents</label>
+            </p>
+            <p> 
+                    <input type="radio" id="accidents-to-population-chart" name="radioButton" value="accToState" onclick="hideCheckboxes()"><label for="accidents-to-population-chart"> Accidents to state population</label>
+            </p>
+            <p>              
+                    <input type="radio" id="accidents-bad-weather-chart" name="radioButton" value="accWeather" onclick="showCheckboxes()"><label for="accidents-bad-weather-chart"> Accidents caused by inclimate weather</label>
+            </p>
+            <table>
+                <tr class="weather">
+                    <td>                        
+                        <input type="checkbox" id="weather-rain" name="weatherButton" value="rainAccidents"> <label for="weather-rain"> Rain</label>
+                    </td>
+                    <td>                       
+                        <input type="checkbox" id="weather-hail" name="weatherButton" value="hailAccidents"><label for="weather-hail"> Hail</label>
+                    </td>
+                    <td>      
+                        <input type="checkbox" id="weather-snow" name="weatherButton" value="snowAccidents"> <label for="weather-snow"> Snow</label>
+                    </td>
+                </tr>  
+                <tr class="weather">
+                    <td>                          
+                        <input type="checkbox" id="weather-visibility" name="weatherButton" value="visibilityAccidents"><label for="weather-visibility"> Visibility</label>
+                    </td>
+                    <td>                          
+                        <input type="checkbox" id="weather-wind" name="weatherButton" value="windAccidents"><label for="weather-wind"> Winds</label>
+                    </td>
+                    <td>                            
+                        <input type="checkbox" id="weather-freezing" name="weatherButton" value="freezingAccidents"><label for="weather-freezing"> Freezing</label>
+                    </td>
+                </tr>
+            </table>      
+            <button type="button" id="searchButton" onclick="radioListener()">Submit</button>
+        </fieldset>
+    </form>
+    
+    <div class="total-accidents">
+        <p id="total-accidents-title" class="total-accidents-title">Total Accidents</p>
+        <p id="total-accidents-display" class="total-accidents-display">...</p>
+    </div>
+    <div class="accidents-per-100k">
+        <p id="accidents-per-100k-title" class="accidents-per-100k-title">State Accidents per 100,000 people</p>
+    </div>
+    <div class="accidents-weather">
+        <p id="accidents-weather-title" class="accidents-weather-title">Total Accidents with selected weather conditions</p>
+        <p id="accidents-weather-display" class="accidents-weather-display">...</p>
+    </div>
+    <script type="text/javascript">
+        $("#total-accidents-title").hide();
+        $("#total-accidents-display").hide();
+        $("#accidents-per-100k-title").hide();
+        $("#accidents-weather-title").hide();
+        $("#accidents-weather-display").hide();    
+    </script>
+</div>
+  
+<div id="regions_div"></div>
+
+<%- include ("./footer.ejs") %>
